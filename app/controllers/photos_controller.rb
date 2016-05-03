@@ -26,11 +26,8 @@ class PhotosController < ApplicationController
     redirect_to("/photos")
   end
 
-  def edit_form
-    @photo = Photo.find_by({ :id => params[:id] })
-  end
 
-  def update_row
+    def edit_form
     @photo = Photo.find_by({ :id => params[:id] })
     @photo.caption = params[:caption]
     @photo.source = params[:source]
@@ -41,5 +38,15 @@ class PhotosController < ApplicationController
 
   end
 
+
+  def update_row
+    p = Photo.find_by({ :id => params[:id] })
+    p.caption = params[:the_caption]
+    p.source = params[:the_source]
+    p.save
+
+redirect("http://localhost.3000/")
+    end
+#Next, write different logic in update_row to receive data from the form via the params hash, look up the correct row, actually make the changes, and then save them (similar to the create_row action). After you've done that work, you can redirect back to the index or maybe to the show page of the row that you just updated.
 
 end
