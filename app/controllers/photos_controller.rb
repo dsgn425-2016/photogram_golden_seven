@@ -27,11 +27,19 @@ class PhotosController < ApplicationController
   end
 
   def edit_form
+    @photo = Photo.find_by({ :id => params[:id] })
   end
 
   def update_row
     @photo = Photo.find_by({ :id => params[:id] })
+    @photo.caption = params[:caption]
+    @photo.source = params[:source]
+
+    @photo.save
+
     render("http://localhost.3000/edit_form.html.erb")
+
   end
+
 
 end
