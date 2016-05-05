@@ -14,5 +14,5 @@ Rails.application.routes.draw do
 
   #Routes to UPDATE photos
   get("/photos/:id/edit", { :controller => "photos", :action => "edit" })
-  get("/update_photo/:id", { :controller => "photos", :action => "update_row" })
+  get("/update/:id",           { :controller => "photos", :action => "update" })
 end
