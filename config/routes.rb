@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get("/delete_photo/:id", { :controller => "photos", :action => "destroy" })
 
   #Route to EDIT photos
-  get("/photos/:id/edit", { :controller => "photos", :action => "edit" })
+  get("/photos/:id/edit", { :controller => "photos", :action => "edit_form" })
+  get("/update_photo/:id",{ :controller => "photos", :action => "update_row" })
 
 end
