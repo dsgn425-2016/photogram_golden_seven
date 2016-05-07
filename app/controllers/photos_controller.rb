@@ -11,6 +11,7 @@ class PhotosController < ApplicationController
     p = Photo.new
     p.caption = params[:the_caption]
     p.source = params[:the_source]
+    p.last
     p.save
 
     redirect_to("http://localhost:3000/photos")
