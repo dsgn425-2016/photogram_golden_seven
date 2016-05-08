@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   get("/photos/:id/edit", { :controller => "photos", :action => "edit_form" })
   get("/photos/update_photo/:id", { :controller => "photos", :action => "update" })
 
-
+# might need to go back and check these Routes
 
 end
