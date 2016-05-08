@@ -8,6 +8,9 @@
   <label for="the_source">Image URL:</label>
   <input type="text" id="the_source" name="the_source" value="<%=@photo.source%>">
 
+  <img src="<%= @photo.source%>" width="480">
+  <p><%= @photo.caption%></p>
+
 
   <button>Edit Photo</button>
 </form>
