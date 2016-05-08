@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get("/", { :controller => "photos", :action => "index" })
   # This is the most up-to-date version
   #Routes to CREATE photo
-  get("/photos/new", { :controller => "photos", :action=>"new_form"})
+  get("/photos/new", { :controller => "photos", :action=>"new"})
   get("/create_photo", { :controller => "photos", :action=> "create_row"})
 
   # Routes to READ photos

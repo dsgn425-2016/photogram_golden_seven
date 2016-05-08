@@ -21,7 +21,7 @@ class PhotosController < ApplicationController
     redirect_to("http://localhost:3000/photos/" + params[:id])
   end
 
-  def new_form
+  def new
 
   end
 
