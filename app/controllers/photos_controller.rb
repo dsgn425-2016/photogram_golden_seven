@@ -18,7 +18,7 @@ class PhotosController < ApplicationController
     p.source = params[:the_source]
     p.save
 
-    redirect_to("http://localhost:3000/photos/" + params[:id])
+    render("show")
   end
 
   def new
