@@ -3,10 +3,10 @@
 <form action="http://localhost:3000/update_row/<%=@photo.id%>">
 
   <label>Caption:</label>
-  <input type="text" name="the_caption" value="<%=@photo.caption%>">
+  <input type="text" id="the_caption" name="the_caption" value="<%=@photo.caption%>">
 
   <lable>Image URL:</lable>
-  <input type="text" name="the_source" value="<%=@photo.source%>">
+  <input type="text" id="the_source" name="the_source" value="<%=@photo.source%>">
 
 
   <button>Edit Photo</button>

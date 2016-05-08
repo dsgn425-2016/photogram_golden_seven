@@ -22,6 +22,7 @@ class PhotosController < ApplicationController
   end
 
   def new
+    render('new')
 
   end
 
@@ -33,6 +34,7 @@ class PhotosController < ApplicationController
 
     # render("create_row.html.erb")
     redirect_to("http://localhost:3000/photos")
+
   end
 
   def destroy
