@@ -35,6 +35,6 @@ class PhotosController < ApplicationController
     u.caption = params[:new_caption]
     u.source = params[:new_source]
     u.save
-    redirect_to("/photos/#{params[:id]}>")
+    redirect_to("/photos/#{params[:id]}")
   end
 end
