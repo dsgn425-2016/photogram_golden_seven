@@ -13,16 +13,16 @@ class PhotosController < ApplicationController
   end
 
   def create_row
-    p = Photo.new
-    p.caption = params[:the_caption]
-    p.source = params[:the_source]
-    p.save
+    @p = Photo.new
+    @p.caption = params[:caption]
+    @p.source = params[:source]
+    @p.save
     redirect_to("/photos")
   end
 
   def delete_row
-    d = Photo.find(params[:id])
-    d.destroy
+    @d = Photo.find(params[:id])
+    @d.destroy
     redirect_to("/photos")
   end
 
@@ -31,10 +31,10 @@ class PhotosController < ApplicationController
   end
 
   def update_row
-    u = Photo.find_by ({ :id => params[:id] })
-    u.caption = params[:new_caption]
-    u.source = params[:new_source]
-    u.save
+    @u = Photo.find_by ({ :id => params[:id] })
+    @u.caption = params[:new_caption]
+    @u.source = params[:new_source]
+    @u.save
     redirect_to("/photos/#{params[:id]}")
   end
 end
