@@ -38,6 +38,8 @@ class PhotosController < ApplicationController
     p.source = params[:the_source]
     p.save
 
-    redirect_to("http://localhost:3000/photos")
+    redirect_to("http://localhost:3000/photos/")
+
+    #how can you have it redirect to a specific page?
   end
 end
