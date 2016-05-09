@@ -38,7 +38,7 @@ class PhotosController < ApplicationController
     @photo.id = params[:id]
     @photo.save
 
-    redirect_to("http://localhost:3000/photos")
+    render ("show")
   end
 
 end
