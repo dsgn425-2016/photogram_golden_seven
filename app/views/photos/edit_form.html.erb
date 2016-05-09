@@ -3,12 +3,12 @@
 
 <form action="http://localhost:3000/update_photo/<%= @photo.id %>">
 <div>
-  <label for="caption">Caption:</label>
-  <input for="caption" type="text" name="the_caption" value="<%= @photo.caption %>">
+  <label for="photo_caption">Caption:</label>
+  <input id="photo_caption" type="text" name="the_caption" value="<%= @photo.caption %>">
 </div>
 <div>
-  <label for="source">Image URL:</label>
-  <input for="source" type="text" name="the_source" value="<%= @photo.source %>">
+  <label for="photo_image_url">Image URL:</label>
+  <input id="photo_image_url" type="text" name="the_source" value="<%= @photo.source %>">
 </div>
 <div>
   <button> Update Photo </button>
