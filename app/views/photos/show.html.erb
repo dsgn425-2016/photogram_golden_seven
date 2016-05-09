@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Photogram</title>
+  <link rel="stylesheet" media="all" href="/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" />
+  <script src="/assets/application-10ae9348133c44590cf059bf8209124a94861ffcdd12b0642fc4b33b072cad4d.js"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="pqlUDn255eevejB1BShFlyHgJjlJ/VW2E4ns9S5LUZArkQx0sr/BEVEMmxNYnuNVNJVnpmYxQmpD3a2Mp+R3ag==" />
+</head>
+
+<body>
+  <h1>Photo Details</h1>
+
+  <img src="<%= @photo.source %>" alt="" width="720">
+
+
+  <p><%=@photo.caption%></p>
+
+  <a href="http://localhost:3000/photos/">Back</a>
+
+  <a href="http://localhost:3000/photos/<%= @photo.id %>/edit">Edit</a>
+
+  <a href="http://localhost:3000/photos/delete_photo/<%= @photo.id %>">Delete</a>
+
+
+
+</body>
+</html>
