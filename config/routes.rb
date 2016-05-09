@@ -11,8 +11,8 @@ get("/delete_photo/:id", {:controller=>"photos", :action=>"destroy"})
 #to edit photos
 get("/photos/:id/edit", {:controller=>"photos", :action=>"edit_form"})
 
-# to update photos
-get("/update_photos/:id", {:controller=>"photos", :action=>"update_row"})
+# to update photo
+get("/update_photo/:id", {:controller=>"photos", :action=>"update_row"})
 
 
   # Routes to READ photos
