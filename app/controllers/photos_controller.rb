@@ -25,7 +25,10 @@ class PhotosController < ApplicationController
   end
 
   def edit_form
-
+    p = Photo.find_by({:id => params[:id]})
+    @photo_source = p.source
+    @photo_caption = p.caption
+    @photo_id = p.id
   end
 
   def update_row
@@ -34,7 +37,7 @@ class PhotosController < ApplicationController
     p.source = params[:the_source]
     p.save
 
-    redirect_to("http://localhost:3000/#{p.id}")
+    redirect_to("http://localhost:3000/photos/#{p.id}")
   end
 
   def destroy
