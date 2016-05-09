@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <h1>Photo Details</h1>
+
+  <img src="<%= @photo.source %>" alt="" width="480">
+
+  <p><%= @photo.caption %></p>
+
+  <a href="http://localhost:3000/photos">Back</a>
+  <a href="http://localhost:3000/photos/<%= @photo.id %>/edit">Edit</a>
+  <a href="http://localhost:3000/delete_photo/<%= @photo.id %>">Delete</a>
+  </body>
+</html>

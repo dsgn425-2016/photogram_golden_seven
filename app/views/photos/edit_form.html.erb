@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Update Photo</h1>
+
+    <img src="<%= @photo.source %>" alt="" width="480">
+
+    <form action="/update_photo/<%= @photo.id %>">
+      <div>
+        <label for="photo_caption">Caption:</label>
+        <input type="text" id="photo_caption" name="caption" value="<%= @photo.caption %>">
+      </div>
+      <div>
+        <label for="photo_image_url">Image URL:</label>
+        <input type="text" id="photo_image_url" name="source" value="<%= @photo.source %>">
+      </div>
+      <div>
+        <button>Update Photo</button>
+      </div>
+    </form>
+  </body>
+</html>
