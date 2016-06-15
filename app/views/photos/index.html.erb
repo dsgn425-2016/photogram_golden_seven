@@ -4,8 +4,8 @@
 
 <table>
   <tr>
-    <th>Thumbnail</th>
-    <th>Caption</th>
+    <th>Life at Kellogg</th>
+    <th>Name Of The Place</th>
     <th colspan="3">Actions</th>
   </tr>
   <% @list_of_photos.each do |photo| %>
@@ -18,12 +18,6 @@
     </td>
     <td>
       <a href="http://localhost:3000/photos/<%= photo.id %>">Show</a>
-    </td>
-    <td>
-      <a href="http://localhost:3000/photos/<%= photo.id %>/edit">Edit</a>
-    </td>
-    <td>
-      <a href="http://localhost:3000/delete_photo/<%= photo.id %>">Delete</a>
     </td>
   </tr>
   <% end %>
